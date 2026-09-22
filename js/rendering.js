@@ -131,8 +131,10 @@ export function drawBoard() {
     });
   }
 
-  // Player Reachable Highlights
-  if (activeViewMode === 'player' && typeof reachableNodes !== 'undefined') {
+  // Player Reachable Highlights (Restricted to Active Turn)
+  const isMyTurnActive = typeof isMyTurn === 'undefined' || isMyTurn;
+
+  if (isMyTurnActive && activeViewMode === 'player' && typeof reachableNodes !== 'undefined') {
     Object.keys(reachableNodes).forEach(rId => {
       const target = nodes[rId];
       if (!target) return;
@@ -162,7 +164,6 @@ export function drawBoard() {
           lineWidth: 2.5
         }
       };
-
       
       const style = styleMap[nodeType] || styleMap.path;
 
@@ -191,8 +192,8 @@ export function drawBoard() {
     });
   }
 
-  // 🔮 HIGHLIGHT SELECTED KAKKABU TARGET (Independent of reachableNodes loop)
-  if (highlightedKakkabuId && nodes[highlightedKakkabuId]) {
+  // 🔮 HIGHLIGHT SELECTED KAKKABU TARGET (Restricted to Active Turn)
+  if (isMyTurnActive && highlightedKakkabuId && nodes[highlightedKakkabuId]) {
     const targetNode = nodes[highlightedKakkabuId];
     ctx.save();
     ctx.beginPath();
@@ -211,7 +212,7 @@ export function drawBoard() {
     ctx.restore();
   }
 
-  // Player Token Rendering
+  // Player Token Rendering (Always visible for both players so movement syncs cleanly)
   const isSameNode = gameState.players[0].pos === gameState.players[1].pos;
 
   gameState.players.forEach((p, idx) => {
