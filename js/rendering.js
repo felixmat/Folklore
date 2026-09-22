@@ -13,7 +13,7 @@ const ctx = canvas ? canvas.getContext('2d') : null;
 
 let isImageLoaded = false;
 const boardImage = new Image();
-boardImage.src = '../board_map.png';
+boardImage.src = './board_map.png';
 
 boardImage.onload = () => {
   isImageLoaded = true;

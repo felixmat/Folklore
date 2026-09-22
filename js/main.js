@@ -26,7 +26,7 @@ let dragStartPos = { x: 0, y: 0 };
 export async function loadGameMap() {
   try {
     if (Object.keys(nodes).length === 0) {
-      await loadNodesData('../game_map_nodes.json');
+      await loadNodesData('./game_map_nodes.json');
     }
 
     if (Object.keys(nodes).length > 0) {
