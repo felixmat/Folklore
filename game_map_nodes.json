@@ -1,0 +1,1703 @@
+{
+  "N1": {
+    "id": "N1",
+    "type": "location",
+    "name": "Market",
+    "x": 358,
+    "y": 435,
+    "neighbors": [
+      "N2",
+      "N33",
+      "N60",
+      "N86"
+    ],
+    "requiredItem": null,
+    "locationName": "Market"
+  },
+  "N2": {
+    "id": "N2",
+    "type": "kakkabu",
+    "name": "K1",
+    "x": 336,
+    "y": 378,
+    "neighbors": [
+      "N1",
+      "N3"
+    ],
+    "locationName": null,
+    "requiredItem": null
+  },
+  "N3": {
+    "id": "N3",
+    "type": "path",
+    "name": "Step 1",
+    "x": 329,
+    "y": 355,
+    "neighbors": [
+      "N2",
+      "N4"
+    ]
+  },
+  "N4": {
+    "id": "N4",
+    "type": "interaction",
+    "name": "Step 2",
+    "x": 320,
+    "y": 332,
+    "neighbors": [
+      "N3",
+      "N5"
+    ],
+    "locationName": null,
+    "requiredItem": null
+  },
+  "N5": {
+    "id": "N5",
+    "type": "path",
+    "name": "Step 3",
+    "x": 311,
+    "y": 309,
+    "neighbors": [
+      "N4",
+      "N6"
+    ]
+  },
+  "N6": {
+    "id": "N6",
+    "type": "path",
+    "name": "Step 4",
+    "x": 295,
+    "y": 285,
+    "neighbors": [
+      "N5",
+      "N7"
+    ]
+  },
+  "N7": {
+    "id": "N7",
+    "type": "path",
+    "name": "Step 5",
+    "x": 280,
+    "y": 255,
+    "neighbors": [
+      "N6",
+      "N8",
+      "N44",
+      "N74"
+    ]
+  },
+  "N8": {
+    "id": "N8",
+    "type": "path",
+    "name": "Step 6",
+    "x": 274,
+    "y": 218,
+    "neighbors": [
+      "N7",
+      "N9"
+    ]
+  },
+  "N9": {
+    "id": "N9",
+    "type": "path",
+    "name": "Step 7",
+    "x": 282,
+    "y": 187,
+    "neighbors": [
+      "N8",
+      "N10"
+    ]
+  },
+  "N10": {
+    "id": "N10",
+    "type": "path",
+    "name": "Step 8",
+    "x": 292,
+    "y": 161,
+    "neighbors": [
+      "N9",
+      "N11"
+    ]
+  },
+  "N11": {
+    "id": "N11",
+    "type": "path",
+    "name": "Step 9",
+    "x": 301,
+    "y": 133,
+    "neighbors": [
+      "N10",
+      "N12"
+    ]
+  },
+  "N12": {
+    "id": "N12",
+    "type": "path",
+    "name": "Step 10",
+    "x": 311,
+    "y": 106,
+    "neighbors": [
+      "N11",
+      "N13"
+    ]
+  },
+  "N13": {
+    "id": "N13",
+    "type": "path",
+    "name": "Step 11",
+    "x": 321,
+    "y": 75,
+    "neighbors": [
+      "N12",
+      "N14",
+      "N32"
+    ]
+  },
+  "N14": {
+    "id": "N14",
+    "type": "path",
+    "name": "Step 12",
+    "x": 350,
+    "y": 72,
+    "neighbors": [
+      "N13",
+      "N15"
+    ]
+  },
+  "N15": {
+    "id": "N15",
+    "type": "path",
+    "name": "Step 13",
+    "x": 373,
+    "y": 69,
+    "neighbors": [
+      "N14",
+      "N16"
+    ]
+  },
+  "N16": {
+    "id": "N16",
+    "type": "path",
+    "name": "Step 14",
+    "x": 397,
+    "y": 80,
+    "neighbors": [
+      "N15",
+      "N17"
+    ]
+  },
+  "N17": {
+    "id": "N17",
+    "type": "path",
+    "name": "Step 15",
+    "x": 417,
+    "y": 96,
+    "neighbors": [
+      "N16",
+      "N18"
+    ]
+  },
+  "N18": {
+    "id": "N18",
+    "type": "path",
+    "name": "Step 16",
+    "x": 437,
+    "y": 116,
+    "neighbors": [
+      "N17",
+      "N19"
+    ]
+  },
+  "N19": {
+    "id": "N19",
+    "type": "path",
+    "name": "Step 17",
+    "x": 456,
+    "y": 141,
+    "neighbors": [
+      "N18",
+      "N20"
+    ]
+  },
+  "N20": {
+    "id": "N20",
+    "type": "kakkabu",
+    "name": "K2",
+    "x": 471,
+    "y": 165,
+    "neighbors": [
+      "N19",
+      "N21"
+    ],
+    "locationName": null,
+    "requiredItem": null
+  },
+  "N21": {
+    "id": "N21",
+    "type": "path",
+    "name": "Step 18",
+    "x": 486,
+    "y": 188,
+    "neighbors": [
+      "N20",
+      "N22",
+      "N52",
+      "N61"
+    ]
+  },
+  "N22": {
+    "id": "N22",
+    "type": "path",
+    "name": "Step 19",
+    "x": 500,
+    "y": 165,
+    "neighbors": [
+      "N21",
+      "N23"
+    ]
+  },
+  "N23": {
+    "id": "N23",
+    "type": "path",
+    "name": "Step 20",
+    "x": 511,
+    "y": 145,
+    "neighbors": [
+      "N22",
+      "N24"
+    ]
+  },
+  "N24": {
+    "id": "N24",
+    "type": "location",
+    "name": "Pond",
+    "x": 531,
+    "y": 100,
+    "neighbors": [
+      "N23"
+    ],
+    "locationName": "Pond",
+    "requiredItem": "Wooden Cane"
+  },
+  "N25": {
+    "id": "N25",
+    "type": "location",
+    "name": "Karimpanathottam",
+    "x": 120,
+    "y": 84,
+    "neighbors": [
+      "N26"
+    ],
+    "locationName": "Karimpanathottam",
+    "requiredItem": "Lime Paste"
+  },
+  "N26": {
+    "id": "N26",
+    "type": "path",
+    "name": "Step 21",
+    "x": 156,
+    "y": 101,
+    "neighbors": [
+      "N25",
+      "N27"
+    ]
+  },
+  "N27": {
+    "id": "N27",
+    "type": "path",
+    "name": "Step 22",
+    "x": 180,
+    "y": 118,
+    "neighbors": [
+      "N26",
+      "N28",
+      "N51"
+    ]
+  },
+  "N28": {
+    "id": "N28",
+    "type": "path",
+    "name": "Step 23",
+    "x": 205,
+    "y": 105,
+    "neighbors": [
+      "N27",
+      "N29"
+    ]
+  },
+  "N29": {
+    "id": "N29",
+    "type": "path",
+    "name": "Step 24",
+    "x": 226,
+    "y": 96,
+    "neighbors": [
+      "N28",
+      "N30"
+    ]
+  },
+  "N30": {
+    "id": "N30",
+    "type": "interaction",
+    "name": "Step 25",
+    "x": 249,
+    "y": 84,
+    "neighbors": [
+      "N29",
+      "N31"
+    ],
+    "locationName": null,
+    "requiredItem": null
+  },
+  "N31": {
+    "id": "N31",
+    "type": "path",
+    "name": "Step 26",
+    "x": 272,
+    "y": 78,
+    "neighbors": [
+      "N30",
+      "N32"
+    ]
+  },
+  "N32": {
+    "id": "N32",
+    "type": "path",
+    "name": "Step 27",
+    "x": 294,
+    "y": 74,
+    "neighbors": [
+      "N31",
+      "N13"
+    ]
+  },
+  "N33": {
+    "id": "N33",
+    "type": "path",
+    "name": "Step 28",
+    "x": 314,
+    "y": 437,
+    "neighbors": [
+      "N1",
+      "N34"
+    ]
+  },
+  "N34": {
+    "id": "N34",
+    "type": "path",
+    "name": "Step 29",
+    "x": 294,
+    "y": 439,
+    "neighbors": [
+      "N33",
+      "N35"
+    ]
+  },
+  "N35": {
+    "id": "N35",
+    "type": "path",
+    "name": "Step 30",
+    "x": 273,
+    "y": 443,
+    "neighbors": [
+      "N34",
+      "N36",
+      "N147"
+    ]
+  },
+  "N36": {
+    "id": "N36",
+    "type": "path",
+    "name": "Step 31",
+    "x": 244,
+    "y": 447,
+    "neighbors": [
+      "N35",
+      "N37"
+    ]
+  },
+  "N37": {
+    "id": "N37",
+    "type": "path",
+    "name": "Step 32",
+    "x": 219,
+    "y": 447,
+    "neighbors": [
+      "N36",
+      "N38",
+      "N100"
+    ]
+  },
+  "N38": {
+    "id": "N38",
+    "type": "interaction",
+    "name": "Step 33",
+    "x": 209,
+    "y": 423,
+    "neighbors": [
+      "N37",
+      "N39"
+    ],
+    "locationName": null,
+    "requiredItem": null
+  },
+  "N39": {
+    "id": "N39",
+    "type": "path",
+    "name": "Step 34",
+    "x": 211,
+    "y": 389,
+    "neighbors": [
+      "N38",
+      "N40"
+    ]
+  },
+  "N40": {
+    "id": "N40",
+    "type": "path",
+    "name": "Step 35",
+    "x": 217,
+    "y": 363,
+    "neighbors": [
+      "N39",
+      "N41"
+    ]
+  },
+  "N41": {
+    "id": "N41",
+    "type": "path",
+    "name": "Step 36",
+    "x": 223,
+    "y": 337,
+    "neighbors": [
+      "N40",
+      "N42"
+    ]
+  },
+  "N42": {
+    "id": "N42",
+    "type": "path",
+    "name": "Step 37",
+    "x": 231,
+    "y": 314,
+    "neighbors": [
+      "N41",
+      "N43"
+    ]
+  },
+  "N43": {
+    "id": "N43",
+    "type": "path",
+    "name": "Step 38",
+    "x": 235,
+    "y": 277,
+    "neighbors": [
+      "N42",
+      "N44",
+      "N45",
+      "N48"
+    ]
+  },
+  "N44": {
+    "id": "N44",
+    "type": "path",
+    "name": "Step 39",
+    "x": 258,
+    "y": 269,
+    "neighbors": [
+      "N43",
+      "N7"
+    ]
+  },
+  "N45": {
+    "id": "N45",
+    "type": "path",
+    "name": "Step 40",
+    "x": 209,
+    "y": 284,
+    "neighbors": [
+      "N43",
+      "N46"
+    ]
+  },
+  "N46": {
+    "id": "N46",
+    "type": "path",
+    "name": "Step 41",
+    "x": 185,
+    "y": 303,
+    "neighbors": [
+      "N45",
+      "N47"
+    ]
+  },
+  "N47": {
+    "id": "N47",
+    "type": "location",
+    "name": "Palace",
+    "x": 147,
+    "y": 334,
+    "neighbors": [
+      "N46"
+    ],
+    "locationName": "Palace",
+    "requiredItem": "Gold"
+  },
+  "N48": {
+    "id": "N48",
+    "type": "path",
+    "name": "Step 43",
+    "x": 226,
+    "y": 240,
+    "neighbors": [
+      "N43",
+      "N49"
+    ]
+  },
+  "N49": {
+    "id": "N49",
+    "type": "path",
+    "name": "Step 44",
+    "x": 216,
+    "y": 209,
+    "neighbors": [
+      "N48",
+      "N50"
+    ]
+  },
+  "N50": {
+    "id": "N50",
+    "type": "path",
+    "name": "Step 45",
+    "x": 204,
+    "y": 178,
+    "neighbors": [
+      "N49",
+      "N51"
+    ]
+  },
+  "N51": {
+    "id": "N51",
+    "type": "kakkabu",
+    "name": "K3",
+    "x": 193,
+    "y": 149,
+    "neighbors": [
+      "N50",
+      "N27"
+    ],
+    "locationName": null,
+    "requiredItem": null
+  },
+  "N52": {
+    "id": "N52",
+    "type": "path",
+    "name": "Step 46",
+    "x": 480,
+    "y": 223,
+    "neighbors": [
+      "N21",
+      "N53"
+    ]
+  },
+  "N53": {
+    "id": "N53",
+    "type": "path",
+    "name": "Step 47",
+    "x": 473,
+    "y": 261,
+    "neighbors": [
+      "N52",
+      "N54"
+    ]
+  },
+  "N54": {
+    "id": "N54",
+    "type": "path",
+    "name": "Step 48",
+    "x": 464,
+    "y": 299,
+    "neighbors": [
+      "N53",
+      "N55"
+    ]
+  },
+  "N55": {
+    "id": "N55",
+    "type": "path",
+    "name": "Step 49",
+    "x": 458,
+    "y": 329,
+    "neighbors": [
+      "N54",
+      "N56"
+    ]
+  },
+  "N56": {
+    "id": "N56",
+    "type": "path",
+    "name": "Step 50",
+    "x": 454,
+    "y": 367,
+    "neighbors": [
+      "N55",
+      "N57"
+    ]
+  },
+  "N57": {
+    "id": "N57",
+    "type": "path",
+    "name": "Step 51",
+    "x": 448,
+    "y": 402,
+    "neighbors": [
+      "N56",
+      "N58"
+    ]
+  },
+  "N58": {
+    "id": "N58",
+    "type": "path",
+    "name": "Step 52",
+    "x": 449,
+    "y": 436,
+    "neighbors": [
+      "N57",
+      "N59",
+      "N70",
+      "N71",
+      "N115"
+    ]
+  },
+  "N59": {
+    "id": "N59",
+    "type": "path",
+    "name": "Step 53",
+    "x": 425,
+    "y": 434,
+    "neighbors": [
+      "N58",
+      "N60"
+    ]
+  },
+  "N60": {
+    "id": "N60",
+    "type": "path",
+    "name": "Step 54",
+    "x": 404,
+    "y": 436,
+    "neighbors": [
+      "N59",
+      "N1"
+    ]
+  },
+  "N61": {
+    "id": "N61",
+    "type": "path",
+    "name": "Step 55",
+    "x": 504,
+    "y": 217,
+    "neighbors": [
+      "N21",
+      "N62"
+    ]
+  },
+  "N62": {
+    "id": "N62",
+    "type": "interaction",
+    "name": "Step 56",
+    "x": 513,
+    "y": 243,
+    "neighbors": [
+      "N61",
+      "N63"
+    ],
+    "locationName": null,
+    "requiredItem": null
+  },
+  "N63": {
+    "id": "N63",
+    "type": "path",
+    "name": "Step 57",
+    "x": 518,
+    "y": 269,
+    "neighbors": [
+      "N62",
+      "N64"
+    ]
+  },
+  "N64": {
+    "id": "N64",
+    "type": "path",
+    "name": "Step 58",
+    "x": 520,
+    "y": 291,
+    "neighbors": [
+      "N63",
+      "N65"
+    ]
+  },
+  "N65": {
+    "id": "N65",
+    "type": "path",
+    "name": "Step 59",
+    "x": 519,
+    "y": 315,
+    "neighbors": [
+      "N64",
+      "N66"
+    ]
+  },
+  "N66": {
+    "id": "N66",
+    "type": "path",
+    "name": "Step 60",
+    "x": 518,
+    "y": 338,
+    "neighbors": [
+      "N65",
+      "N67"
+    ]
+  },
+  "N67": {
+    "id": "N67",
+    "type": "path",
+    "name": "Step 61",
+    "x": 510,
+    "y": 366,
+    "neighbors": [
+      "N66",
+      "N68"
+    ]
+  },
+  "N68": {
+    "id": "N68",
+    "type": "path",
+    "name": "Step 62",
+    "x": 501,
+    "y": 387,
+    "neighbors": [
+      "N67",
+      "N69"
+    ]
+  },
+  "N69": {
+    "id": "N69",
+    "type": "path",
+    "name": "Step 63",
+    "x": 490,
+    "y": 404,
+    "neighbors": [
+      "N68",
+      "N70"
+    ]
+  },
+  "N70": {
+    "id": "N70",
+    "type": "path",
+    "name": "Step 64",
+    "x": 472,
+    "y": 423,
+    "neighbors": [
+      "N69",
+      "N58"
+    ]
+  },
+  "N71": {
+    "id": "N71",
+    "type": "path",
+    "name": "Step 65",
+    "x": 472,
+    "y": 444,
+    "neighbors": [
+      "N58",
+      "N72"
+    ]
+  },
+  "N72": {
+    "id": "N72",
+    "type": "path",
+    "name": "Step 66",
+    "x": 497,
+    "y": 449,
+    "neighbors": [
+      "N71",
+      "N73"
+    ]
+  },
+  "N73": {
+    "id": "N73",
+    "type": "location",
+    "name": "Kalari",
+    "x": 536,
+    "y": 454,
+    "neighbors": [
+      "N72"
+    ],
+    "locationName": "Kalari",
+    "requiredItem": "Urumi"
+  },
+  "N74": {
+    "id": "N74",
+    "type": "path",
+    "name": "Step 67",
+    "x": 306,
+    "y": 248,
+    "neighbors": [
+      "N7",
+      "N75"
+    ]
+  },
+  "N75": {
+    "id": "N75",
+    "type": "path",
+    "name": "Step 68",
+    "x": 330,
+    "y": 243,
+    "neighbors": [
+      "N74",
+      "N76"
+    ]
+  },
+  "N76": {
+    "id": "N76",
+    "type": "path",
+    "name": "Step 69",
+    "x": 330,
+    "y": 210,
+    "neighbors": [
+      "N75",
+      "N77"
+    ]
+  },
+  "N77": {
+    "id": "N77",
+    "type": "path",
+    "name": "Step 70",
+    "x": 345,
+    "y": 177,
+    "neighbors": [
+      "N76",
+      "N78"
+    ]
+  },
+  "N78": {
+    "id": "N78",
+    "type": "path",
+    "name": "Step 71",
+    "x": 373,
+    "y": 165,
+    "neighbors": [
+      "N77",
+      "N79"
+    ]
+  },
+  "N79": {
+    "id": "N79",
+    "type": "path",
+    "name": "Step 72",
+    "x": 404,
+    "y": 177,
+    "neighbors": [
+      "N78",
+      "N80"
+    ]
+  },
+  "N80": {
+    "id": "N80",
+    "type": "path",
+    "name": "Step 73",
+    "x": 430,
+    "y": 206,
+    "neighbors": [
+      "N79",
+      "N81"
+    ]
+  },
+  "N81": {
+    "id": "N81",
+    "type": "path",
+    "name": "Step 74",
+    "x": 432,
+    "y": 257,
+    "neighbors": [
+      "N80",
+      "N82"
+    ]
+  },
+  "N82": {
+    "id": "N82",
+    "type": "path",
+    "name": "Step 75",
+    "x": 417,
+    "y": 284,
+    "neighbors": [
+      "N81",
+      "N83"
+    ]
+  },
+  "N83": {
+    "id": "N83",
+    "type": "path",
+    "name": "Step 76",
+    "x": 381,
+    "y": 300,
+    "neighbors": [
+      "N82",
+      "N84"
+    ]
+  },
+  "N84": {
+    "id": "N84",
+    "type": "path",
+    "name": "Step 77",
+    "x": 344,
+    "y": 278,
+    "neighbors": [
+      "N83",
+      "N85"
+    ]
+  },
+  "N85": {
+    "id": "N85",
+    "type": "location",
+    "name": "Temple",
+    "x": 366,
+    "y": 236,
+    "neighbors": [
+      "N84"
+    ],
+    "locationName": "Temple",
+    "requiredItem": "Kedavilakku"
+  },
+  "N86": {
+    "id": "N86",
+    "type": "path",
+    "name": "Step 78",
+    "x": 352,
+    "y": 489,
+    "neighbors": [
+      "N1",
+      "N87"
+    ]
+  },
+  "N87": {
+    "id": "N87",
+    "type": "path",
+    "name": "Step 79",
+    "x": 354,
+    "y": 521,
+    "neighbors": [
+      "N86",
+      "N88"
+    ]
+  },
+  "N88": {
+    "id": "N88",
+    "type": "path",
+    "name": "Step 80",
+    "x": 355,
+    "y": 544,
+    "neighbors": [
+      "N87",
+      "N89"
+    ]
+  },
+  "N89": {
+    "id": "N89",
+    "type": "path",
+    "name": "Step 81",
+    "x": 357,
+    "y": 571,
+    "neighbors": [
+      "N88",
+      "N90"
+    ]
+  },
+  "N90": {
+    "id": "N90",
+    "type": "interaction",
+    "name": "Step 82",
+    "x": 362,
+    "y": 592,
+    "neighbors": [
+      "N89",
+      "N91",
+      "N138",
+      "N139"
+    ],
+    "locationName": null,
+    "requiredItem": null
+  },
+  "N91": {
+    "id": "N91",
+    "type": "path",
+    "name": "Step 83",
+    "x": 371,
+    "y": 614,
+    "neighbors": [
+      "N90",
+      "N92"
+    ]
+  },
+  "N92": {
+    "id": "N92",
+    "type": "path",
+    "name": "Step 84",
+    "x": 390,
+    "y": 632,
+    "neighbors": [
+      "N91",
+      "N93"
+    ]
+  },
+  "N93": {
+    "id": "N93",
+    "type": "location",
+    "name": "Mountain",
+    "x": 425,
+    "y": 650,
+    "neighbors": [
+      "N92",
+      "N94"
+    ],
+    "locationName": "Mountain",
+    "requiredItem": "Metal Rod"
+  },
+  "N94": {
+    "id": "N94",
+    "type": "path",
+    "name": "Step 85",
+    "x": 431,
+    "y": 698,
+    "neighbors": [
+      "N93",
+      "N95"
+    ]
+  },
+  "N95": {
+    "id": "N95",
+    "type": "path",
+    "name": "Step 86",
+    "x": 447,
+    "y": 727,
+    "neighbors": [
+      "N94",
+      "N96"
+    ]
+  },
+  "N96": {
+    "id": "N96",
+    "type": "path",
+    "name": "Step 87",
+    "x": 464,
+    "y": 739,
+    "neighbors": [
+      "N95",
+      "N97"
+    ]
+  },
+  "N97": {
+    "id": "N97",
+    "type": "path",
+    "name": "Step 88",
+    "x": 482,
+    "y": 759,
+    "neighbors": [
+      "N96",
+      "N98",
+      "N124",
+      "N125"
+    ]
+  },
+  "N98": {
+    "id": "N98",
+    "type": "path",
+    "name": "Step 89",
+    "x": 496,
+    "y": 774,
+    "neighbors": [
+      "N97",
+      "N99"
+    ]
+  },
+  "N99": {
+    "id": "N99",
+    "type": "location",
+    "name": "Chudukadu",
+    "x": 515,
+    "y": 791,
+    "neighbors": [
+      "N98"
+    ],
+    "locationName": "Chudukadu",
+    "requiredItem": "Raw Rice Grains"
+  },
+  "N100": {
+    "id": "N100",
+    "type": "path",
+    "name": "Step 90",
+    "x": 200,
+    "y": 478,
+    "neighbors": [
+      "N37",
+      "N101"
+    ]
+  },
+  "N101": {
+    "id": "N101",
+    "type": "path",
+    "name": "Step 91",
+    "x": 196,
+    "y": 512,
+    "neighbors": [
+      "N100",
+      "N102"
+    ]
+  },
+  "N102": {
+    "id": "N102",
+    "type": "path",
+    "name": "Step 92",
+    "x": 211,
+    "y": 538,
+    "neighbors": [
+      "N101",
+      "N103"
+    ]
+  },
+  "N103": {
+    "id": "N103",
+    "type": "location",
+    "name": "Paddy Fields",
+    "x": 223,
+    "y": 562,
+    "neighbors": [
+      "N102",
+      "N104"
+    ],
+    "locationName": "Paddy Fields",
+    "requiredItem": "Palm Toddy"
+  },
+  "N104": {
+    "id": "N104",
+    "type": "path",
+    "name": "Step 93",
+    "x": 226,
+    "y": 592,
+    "neighbors": [
+      "N103",
+      "N105"
+    ]
+  },
+  "N105": {
+    "id": "N105",
+    "type": "path",
+    "name": "Step 94",
+    "x": 221,
+    "y": 621,
+    "neighbors": [
+      "N104",
+      "N106",
+      "N143"
+    ]
+  },
+  "N106": {
+    "id": "N106",
+    "type": "path",
+    "name": "Step 95",
+    "x": 228,
+    "y": 650,
+    "neighbors": [
+      "N105",
+      "N107"
+    ]
+  },
+  "N107": {
+    "id": "N107",
+    "type": "path",
+    "name": "Step 96",
+    "x": 231,
+    "y": 680,
+    "neighbors": [
+      "N106",
+      "N108"
+    ]
+  },
+  "N108": {
+    "id": "N108",
+    "type": "kakkabu",
+    "name": "K4",
+    "x": 234,
+    "y": 712,
+    "neighbors": [
+      "N107",
+      "N109"
+    ],
+    "locationName": null,
+    "requiredItem": null
+  },
+  "N109": {
+    "id": "N109",
+    "type": "path",
+    "name": "Step 97",
+    "x": 237,
+    "y": 740,
+    "neighbors": [
+      "N108",
+      "N110"
+    ]
+  },
+  "N110": {
+    "id": "N110",
+    "type": "path",
+    "name": "Step 98",
+    "x": 237,
+    "y": 767,
+    "neighbors": [
+      "N109",
+      "N111"
+    ]
+  },
+  "N111": {
+    "id": "N111",
+    "type": "path",
+    "name": "Step 99",
+    "x": 233,
+    "y": 794,
+    "neighbors": [
+      "N110",
+      "N112",
+      "N149"
+    ]
+  },
+  "N112": {
+    "id": "N112",
+    "type": "path",
+    "name": "Step 100",
+    "x": 205,
+    "y": 801,
+    "neighbors": [
+      "N111",
+      "N113"
+    ]
+  },
+  "N113": {
+    "id": "N113",
+    "type": "path",
+    "name": "Step 101",
+    "x": 182,
+    "y": 807,
+    "neighbors": [
+      "N112",
+      "N114"
+    ]
+  },
+  "N114": {
+    "id": "N114",
+    "type": "location",
+    "name": "Forest",
+    "x": 143,
+    "y": 811,
+    "neighbors": [
+      "N113"
+    ],
+    "locationName": "Forest",
+    "requiredItem": "Choottu"
+  },
+  "N115": {
+    "id": "N115",
+    "type": "path",
+    "name": "Step 102",
+    "x": 458,
+    "y": 474,
+    "neighbors": [
+      "N58",
+      "N116"
+    ]
+  },
+  "N116": {
+    "id": "N116",
+    "type": "path",
+    "name": "Step 103",
+    "x": 470,
+    "y": 497,
+    "neighbors": [
+      "N115",
+      "N117"
+    ]
+  },
+  "N117": {
+    "id": "N117",
+    "type": "path",
+    "name": "Step 104",
+    "x": 485,
+    "y": 521,
+    "neighbors": [
+      "N116",
+      "N118"
+    ]
+  },
+  "N118": {
+    "id": "N118",
+    "type": "path",
+    "name": "Step 105",
+    "x": 499,
+    "y": 548,
+    "neighbors": [
+      "N117",
+      "N119"
+    ]
+  },
+  "N119": {
+    "id": "N119",
+    "type": "path",
+    "name": "Step 106",
+    "x": 508,
+    "y": 573,
+    "neighbors": [
+      "N118",
+      "N120"
+    ]
+  },
+  "N120": {
+    "id": "N120",
+    "type": "path",
+    "name": "Step 107",
+    "x": 511,
+    "y": 602,
+    "neighbors": [
+      "N119",
+      "N121"
+    ]
+  },
+  "N121": {
+    "id": "N121",
+    "type": "interaction",
+    "name": "Step 108",
+    "x": 512,
+    "y": 634,
+    "neighbors": [
+      "N120",
+      "N122"
+    ],
+    "locationName": null,
+    "requiredItem": null
+  },
+  "N122": {
+    "id": "N122",
+    "type": "path",
+    "name": "Step 109",
+    "x": 511,
+    "y": 664,
+    "neighbors": [
+      "N121",
+      "N123"
+    ]
+  },
+  "N123": {
+    "id": "N123",
+    "type": "path",
+    "name": "Step 110",
+    "x": 505,
+    "y": 700,
+    "neighbors": [
+      "N122",
+      "N124"
+    ]
+  },
+  "N124": {
+    "id": "N124",
+    "type": "kakkabu",
+    "name": "K5",
+    "x": 496,
+    "y": 729,
+    "neighbors": [
+      "N123",
+      "N97"
+    ],
+    "locationName": null,
+    "requiredItem": null
+  },
+  "N125": {
+    "id": "N125",
+    "type": "path",
+    "name": "Step 111",
+    "x": 465,
+    "y": 772,
+    "neighbors": [
+      "N97",
+      "N126"
+    ]
+  },
+  "N126": {
+    "id": "N126",
+    "type": "path",
+    "name": "Step 112",
+    "x": 447,
+    "y": 783,
+    "neighbors": [
+      "N125",
+      "N127"
+    ]
+  },
+  "N127": {
+    "id": "N127",
+    "type": "path",
+    "name": "Step 113",
+    "x": 422,
+    "y": 792,
+    "neighbors": [
+      "N126",
+      "N128"
+    ]
+  },
+  "N128": {
+    "id": "N128",
+    "type": "path",
+    "name": "Step 114",
+    "x": 399,
+    "y": 799,
+    "neighbors": [
+      "N127",
+      "N129"
+    ]
+  },
+  "N129": {
+    "id": "N129",
+    "type": "path",
+    "name": "Step 115",
+    "x": 380,
+    "y": 799,
+    "neighbors": [
+      "N128",
+      "N130"
+    ]
+  },
+  "N130": {
+    "id": "N130",
+    "type": "path",
+    "name": "Step 116",
+    "x": 359,
+    "y": 794,
+    "neighbors": [
+      "N129",
+      "N131"
+    ]
+  },
+  "N131": {
+    "id": "N131",
+    "type": "path",
+    "name": "Step 117",
+    "x": 339,
+    "y": 783,
+    "neighbors": [
+      "N130",
+      "N132"
+    ]
+  },
+  "N132": {
+    "id": "N132",
+    "type": "interaction",
+    "name": "Step 118",
+    "x": 317,
+    "y": 772,
+    "neighbors": [
+      "N131",
+      "N133"
+    ],
+    "locationName": null,
+    "requiredItem": null
+  },
+  "N133": {
+    "id": "N133",
+    "type": "path",
+    "name": "Step 119",
+    "x": 299,
+    "y": 756,
+    "neighbors": [
+      "N132",
+      "N134",
+      "N148"
+    ]
+  },
+  "N134": {
+    "id": "N134",
+    "type": "path",
+    "name": "Step 120",
+    "x": 305,
+    "y": 726,
+    "neighbors": [
+      "N133",
+      "N135"
+    ]
+  },
+  "N135": {
+    "id": "N135",
+    "type": "path",
+    "name": "Step 121",
+    "x": 308,
+    "y": 693,
+    "neighbors": [
+      "N134",
+      "N136"
+    ]
+  },
+  "N136": {
+    "id": "N136",
+    "type": "path",
+    "name": "Step 122",
+    "x": 314,
+    "y": 665,
+    "neighbors": [
+      "N135",
+      "N137"
+    ]
+  },
+  "N137": {
+    "id": "N137",
+    "type": "path",
+    "name": "Step 123",
+    "x": 329,
+    "y": 638,
+    "neighbors": [
+      "N136",
+      "N138"
+    ]
+  },
+  "N138": {
+    "id": "N138",
+    "type": "path",
+    "name": "Step 124",
+    "x": 344,
+    "y": 614,
+    "neighbors": [
+      "N137",
+      "N90"
+    ]
+  },
+  "N139": {
+    "id": "N139",
+    "type": "path",
+    "name": "Step 125",
+    "x": 335,
+    "y": 589,
+    "neighbors": [
+      "N90",
+      "N140"
+    ]
+  },
+  "N140": {
+    "id": "N140",
+    "type": "path",
+    "name": "Step 126",
+    "x": 310,
+    "y": 598,
+    "neighbors": [
+      "N139",
+      "N141"
+    ]
+  },
+  "N141": {
+    "id": "N141",
+    "type": "path",
+    "name": "Step 127",
+    "x": 288,
+    "y": 608,
+    "neighbors": [
+      "N140",
+      "N142",
+      "N144"
+    ]
+  },
+  "N142": {
+    "id": "N142",
+    "type": "path",
+    "name": "Step 128",
+    "x": 266,
+    "y": 613,
+    "neighbors": [
+      "N141",
+      "N143"
+    ]
+  },
+  "N143": {
+    "id": "N143",
+    "type": "path",
+    "name": "Step 129",
+    "x": 247,
+    "y": 615,
+    "neighbors": [
+      "N142",
+      "N105"
+    ]
+  },
+  "N144": {
+    "id": "N144",
+    "type": "path",
+    "name": "Step 130",
+    "x": 283,
+    "y": 573,
+    "neighbors": [
+      "N141",
+      "N145"
+    ]
+  },
+  "N145": {
+    "id": "N145",
+    "type": "path",
+    "name": "Step 131",
+    "x": 284,
+    "y": 545,
+    "neighbors": [
+      "N144",
+      "N146"
+    ]
+  },
+  "N146": {
+    "id": "N146",
+    "type": "path",
+    "name": "Step 132",
+    "x": 280,
+    "y": 510,
+    "neighbors": [
+      "N145",
+      "N147"
+    ]
+  },
+  "N147": {
+    "id": "N147",
+    "type": "path",
+    "name": "Step 133",
+    "x": 279,
+    "y": 476,
+    "neighbors": [
+      "N146",
+      "N35"
+    ]
+  },
+  "N148": {
+    "id": "N148",
+    "type": "interaction",
+    "name": "Step 134",
+    "x": 277,
+    "y": 767,
+    "neighbors": [
+      "N133",
+      "N149"
+    ],
+    "locationName": null,
+    "requiredItem": null
+  },
+  "N149": {
+    "id": "N149",
+    "type": "path",
+    "name": "Step 135",
+    "x": 255,
+    "y": 785,
+    "neighbors": [
+      "N148",
+      "N111"
+    ]
+  }
+}

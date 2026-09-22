@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kerala Folklore - Tactical Board</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Client-Side Passcode Overlay Gate -->
+<div id="auth-gate" style="position: fixed; inset: 0; background: #0a0a0f; z-index: 9999999; display: flex; align-items: center; justify-content: center; color: #ffffff; font-family: sans-serif;">
+  <div style="text-align: center; background: #1a1b23; padding: 35px 25px; border-radius: 16px; border: 2px solid #c2a649; box-shadow: 0 20px 50px rgba(0,0,0,0.9); width: 320px;">
+    <h2 style="margin-top: 0; color: #f2eedb; font-family: Georgia, serif;">🔒 Restricted Access</h2>
+    <p style="font-size: 0.9rem; color: #a1a1aa; margin-bottom: 20px;">Enter the access key to launch the game:</p>
+    
+    <input type="password" id="auth-pass-input" placeholder="Passcode" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #3f3f46; background: #09090b; color: #ffffff; text-align: center; font-size: 1rem; box-sizing: border-box; outline: none; margin-bottom: 15px;" />
+    
+    <button id="auth-pass-btn" style="width: 100%; padding: 12px; background: linear-gradient(180deg, #c2a649 0%, #9a8032 100%); color: #000000; font-weight: bold; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; letter-spacing: 0.5px;">
+      Enter Game
+    </button>
+    <p id="auth-error-msg" style="color: #ef4444; font-size: 0.85rem; margin-top: 12px; display: none;">Invalid access key. Try again.</p>
+  </div>
+</div>
+
+
+  <!-- STARTUP NAME SETUP MODAL -->
+  <div id="setup-modal">
+    <div class="setup-box">
+      <h2>Enter Player Names</h2>
+      <div class="input-group">
+        <label for="p1-name-input">Player 1 Name:</label>
+        <input type="text" id="p1-name-input" value="Player 1">
+      </div>
+      <div class="input-group">
+        <label for="p2-name-input">Player 2 Name:</label>
+        <input type="text" id="p2-name-input" value="Player 2">
+      </div>
+      <button id="start-game-btn" class="btn" style="margin-top: 8px;">Start Game</button>
+    </div>
+  </div>
+
+  <!-- LEFT HUD / INVENTORY -->
+  <div id="sidebar">
+    <h1>Koodothram</h1>
+
+    <div class="view-toggle">
+      <button class="view-btn active" id="mode-player-btn">Player View</button>
+      <button class="view-btn" id="mode-dev-btn">Developer View</button>
+    </div>
+
+    <!-- ONLINE MULTIPLAYER BAR -->
+    <div class="multiplayer-controls" style="margin-top: 8px;">
+      <button id="host-game-btn" class="btn" style="background:#2a9d8f; width: 100%;">🌐 Host Online Game</button>
+    </div>
+
+    <!-- PLAYER SECTION -->
+    <div id="player-hud-group" style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px;">
+      <div id="p1-card" class="player-card active">
+        <div class="player-header">
+          <span id="p1-display-name">Player 1</span>
+        </div>
+        <div class="section-title">Items in Hand:</div>
+        <div id="p1-items" class="inventory-list"></div>
+      </div>
+
+      <div id="p2-card" class="player-card">
+        <div class="player-header">
+          <span id="p2-display-name">Player 2</span>
+        </div>
+        <div class="section-title">Items in Hand:</div>
+        <div id="p2-items" class="inventory-list"></div>
+      </div>
+
+      <!-- DECKS CONTAINER -->
+      <div class="decks-wrapper" style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 12px; margin: 5px 0;">
+        
+        <!-- ITEM DECK DISPLAY -->
+        <div class="deck-display-card">
+          <div class="deck-back">
+            <span class="deck-title">ITEMS</span>
+            <span id="item-deck-count" class="deck-count-badge">0</span>
+          </div>
+        </div>
+
+        <!-- NEW DECK DISPLAY -->
+        <div class="deck-display-card">
+          <div class="deck-back">
+            <span class="deck-title">IC Cards</span>
+            <span id="ic-deck-count" class="deck-count-badge">0</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CONTROLS & DICE -->
+      <div id="controls" style="display:flex; flex-direction:column; gap:8px;">
+        <div class="dice-display">
+          <span>🎲 <span id="die1">-</span></span>
+          <span>🎲 <span id="die2">-</span></span>
+          <span style="font-size:0.85rem; margin-left:auto; align-self:center;">Moves: <strong id="steps-left" style="color:#fff;">0</strong></span>
+        </div>
+        <button id="roll-btn" class="btn">Roll Dice</button>
+        <button id="end-btn" class="btn" style="background:#1b3a4b;">End Turn</button>
+      </div>
+    </div>
+
+    <!-- DEV PANEL -->
+    <div id="dev-panel" style="display: none;">
+      <h3>Node Overlay Editor</h3>
+
+      <!-- NODE INSPECTOR -->
+      <div id="node-inspector" class="inspector-box" style="display: none;">
+        <div class="inspector-title">Editing Node: <span id="insp-node-id" style="color:#fff;">-</span></div>
+        
+        <div class="input-group">
+          <label for="insp-type">Node Type:</label>
+          <select id="insp-type">
+            <option value="path">Step (Movement Node)</option>
+            <option value="location">Location (Named Place)</option>
+            <option value="interaction">Interaction (Blocks Path)</option>
+            <option value="kakkabu">Kakkabu Point</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="insp-name">Node Label / Name:</label>
+          <input type="text" id="insp-name" placeholder="Node label...">
+        </div>
+
+        <!-- LOCATION LINK DROPDOWN -->
+        <div class="input-group" id="insp-location-group" style="display: none;">
+          <label for="insp-location-preset">Bind Location:</label>
+          <select id="insp-location-preset">
+            <option value="">-- Select Game Location --</option>
+            <option value="Market">Market</option>
+            <option value="Temple">Temple (Req: Kedavilakku)</option>
+            <option value="Paddy Fields">Paddy Fields (Req: Palm Toddy)</option>
+            <option value="Forest">Forest (Req: Choottu)</option>
+            <option value="Mountain">Mountain (Req: Metal Rod)</option>
+            <option value="Pond">Pond (Req: Wooden Cane)</option>
+            <option value="Chudukadu">Chudukadu (Req: Raw Rice Grains)</option>
+            <option value="Kalari">Kalari (Req: Urumi)</option>
+            <option value="Karimpanathottam">Karimpanathottam (Req: Lime Paste)</option>
+            <option value="Palace">Palace (Req: Gold)</option>
+          </select>
+        </div>
+
+        <div style="margin-top: 6px;">
+          <label style="font-size:0.75rem; color:var(--parchment, #e0d6c3); font-weight:bold;">Connections:</label>
+          <div id="insp-neighbors" style="margin-top: 4px;"></div>
+        </div>
+
+        <!-- CONNECT TO EXISTING NODE -->
+        <div class="input-group" style="margin-top: 6px;">
+          <label for="insp-connect-select">Link to Existing Node:</label>
+          <div style="display: flex; gap: 4px;">
+            <select id="insp-connect-select" style="flex:1;"></select>
+            <button id="insp-connect-btn" class="btn btn-dev" style="padding: 4px 8px; font-size: 0.7rem;">Connect</button>
+          </div>
+        </div>
+
+        <button id="delete-node-btn" class="btn btn-danger" style="margin-top: 8px;">Delete Node</button>
+      </div>
+
+      <!-- DEV MAP SETTINGS & JSON IMPORT/EXPORT -->
+      <div class="input-group" style="margin-top: 10px;">
+        <label for="dev-map-file">Map Image Background:</label>
+        <input type="file" id="dev-map-file" accept="image/*">
+      </div>
+
+      <div style="display:flex; gap:6px; margin-top: 8px;">
+        <button id="export-json-btn" class="btn btn-dev" style="flex:1;">Export Map JSON</button>
+        <button id="import-json-btn" class="btn btn-dev" style="flex:1;">Import Map JSON</button>
+        <input type="file" id="import-json-file" accept=".json" style="display: none;">
+      </div>
+
+      <button id="clear-nodes-btn" class="btn btn-danger" style="margin-top: 8px;">Clear All Map Nodes</button>
+
+      <div class="dev-help" style="margin-top: 10px; font-size: 0.8rem; line-height: 1.4;">
+        • <strong>Double-Click Node:</strong> Select & Inspector<br>
+        • <strong>Single-Click Node:</strong> Connect/Disconnect<br>
+        • <strong>Single-Click Canvas:</strong> Create Step Node<br>
+        • <strong>Drag Node:</strong> Reposition on Map
+      </div>
+    </div>
+
+    <div id="log">Enter player names or host an online session to start.</div>
+  </div>
+
+  <!-- KAKKABUSHUNDI POINTS MODAL -->
+  <div id="kakkabu-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <h2>🔮 Kakkabu Teleport Ritual</h2>
+      <p>Do you wish to offer an item to warp to another Kakkabu Point?</p>
+
+      <div id="kakkabu-step-choice">
+        <button id="kakkabu-yes-btn" class="btn btn-primary">Teleport</button>
+        <button id="kakkabu-no-btn" class="btn btn-secondary">Continue without teleporting</button>
+      </div>
+
+      <div id="kakkabu-step-select" style="display: none; margin-top: 15px;">
+        <label><strong>1. Choose an item to discard:</strong></label>
+        <select id="kakkabu-item-select" class="form-control"></select>
+
+        <label style="margin-top: 10px; display: block;"><strong>2. Choose destination Kakkabu Point:</strong></label>
+        <select id="kakkabu-target-select" class="form-control"></select>
+
+        <div style="margin-top: 15px;">
+          <button id="kakkabu-confirm-btn" class="btn btn-success">Confirm Teleport</button>
+          <button id="kakkabu-cancel-btn" class="btn btn-danger">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IC CARD ENCOUNTER MODAL -->
+  <div id="ic-card-modal" class="modal" style="display: none;"></div>
+ 
+  <!-- BOARD CANVAS -->
+  <div id="board-container">
+    <canvas id="gameBoard" width="600" height="900"></canvas>
+  </div>
+
+  <!-- EXTERNAL SCRIPTS -->
+  <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+
+  <!-- ES MODULE ENTRY POINT -->
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
