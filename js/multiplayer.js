@@ -169,12 +169,19 @@ function handleNetworkMessage(data) {
         stepsLeft.innerText = gameState.stepsRemaining || 0;
       }
 
-      // Sync path highlights on remote player's screen
-      if (gameState.hasRolled && gameState.stepsRemaining > 0) {
-        const activeP = gameState.players[gameState.turn];
-        calculateReachableNodes(activeP.pos, gameState.stepsRemaining);
+      // Sync path highlights ONLY if it is CURRENTLY my turn
+      if (isMyTurn()) {
+        if (gameState.hasRolled && gameState.stepsRemaining > 0) {
+          const activeP = gameState.players[gameState.turn];
+          calculateReachableNodes(activeP.pos, gameState.stepsRemaining);
+        } else {
+          calculateReachableNodes(gameState.players[gameState.turn].pos, 0);
+        }
       } else {
-        calculateReachableNodes(gameState.players[gameState.turn].pos, 0);
+        // If it's the opponent's turn, clear out reachable nodes so nothing highlights on our board
+        if (typeof reachableNodes !== 'undefined') {
+          for (let key in reachableNodes) delete reachableNodes[key];
+        }
       }
 
       updateHUD();

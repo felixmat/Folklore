@@ -132,7 +132,7 @@ export function drawBoard() {
   }
 
   // Player Reachable Highlights (Restricted to Active Turn)
-  const isMyTurnActive = typeof isMyTurn === 'undefined' || isMyTurn;
+  const isMyTurnActive = typeof isMyTurn !== 'function' || isMyTurn();
 
   if (isMyTurnActive && activeViewMode === 'player' && typeof reachableNodes !== 'undefined') {
     Object.keys(reachableNodes).forEach(rId => {
