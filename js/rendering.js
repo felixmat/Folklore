@@ -3,7 +3,7 @@ import { reachableNodes } from './pathfinding.js';
 import { LOCATION_PRESETS } from './config.js';
 import { returnICToDeck } from './deck.js';
 import { updateHUD, log } from './state.js';
-import { switchTurn } from './turnManager.js';
+import { switchTurn, isMyTurn } from './turnManager.js';
 
 
 export let highlightedKakkabuId = null;
